@@ -1,0 +1,204 @@
+{
+  "type": "FeatureCollection",
+  "name": "Enrollees",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "John Adigun",
+        "Enrollee ID": "ENR-000001",
+        "Address": "Ikeja, Lagos",
+        "HMO Plan": "Plan1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3515,
+          6.6018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Aisha Bello",
+        "Enrollee ID": "ENR-000002",
+        "Address": "Yaba, Lagos",
+        "HMO Plan": "Plan2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3782,
+          6.5095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Daniel Okafor",
+        "Enrollee ID": "ENR-000003",
+        "Address": "Lekki Phase 1, Lagos",
+        "HMO Plan": "Plan1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.4698,
+          6.4474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Fatima Ibrahim",
+        "Enrollee ID": "ENR-000004",
+        "Address": "Surulere, Lagos",
+        "HMO Plan": "Plan3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3421,
+          6.4996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Michael Adeyemi",
+        "Enrollee ID": "ENR-000005",
+        "Address": "Victoria Island, Lagos",
+        "HMO Plan": "Plan2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.4219,
+          6.4281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Grace Eze",
+        "Enrollee ID": "ENR-000006",
+        "Address": "Gbagada, Lagos",
+        "HMO Plan": "Plan1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3906,
+          6.5487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Samuel Williams",
+        "Enrollee ID": "ENR-000007",
+        "Address": "Maryland, Lagos",
+        "HMO Plan": "Plan3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3695,
+          6.5702
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Esther Ogunleye",
+        "Enrollee ID": "ENR-000008",
+        "Address": "Ajah, Lagos",
+        "HMO Plan": "Plan2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.5726,
+          6.4698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "David Nwosu",
+        "Enrollee ID": "ENR-000009",
+        "Address": "Magodo, Lagos",
+        "HMO Plan": "Plan1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3915,
+          6.6317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Blessing Adebayo",
+        "Enrollee ID": "ENR-000010",
+        "Address": "Festac Town, Lagos",
+        "HMO Plan": "Plan2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2897,
+          6.4682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Ifeanyi Chukwu",
+        "Enrollee ID": "ENR-000011",
+        "Address": "Ogba, Lagos",
+        "HMO Plan": "Plan3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3248,
+          6.6452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Mary Johnson",
+        "Enrollee ID": "ENR-000012",
+        "Address": "Ikorodu, Lagos",
+        "HMO Plan": "Plan1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.5068,
+          6.6194
+        ]
+      }
+    }
+  ]
+}
