@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareRadius | HMO Provider Locator</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">CR</div><div><strong>CareRadius</strong><small>HMO Provider Intelligence</small></div></div>
+    <nav>
+      <button class="active">⌂ <span>Provider Locator</span></button>
+      <button>◉ <span>Enrollee Directory</span></button>
+      <button>▦ <span>Provider Network</span></button>
+      <button>✓ <span>Plan Eligibility</span></button>
+    </nav>
+    <div class="sidebar-note"><small>DATA INDEX</small><strong id="indexStatus">Loading...</strong><p>GitHub Actions generated spatial index</p></div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div>CareRadius / <strong>Provider Locator</strong></div>
+      <div class="online">● Network online</div>
+    </header>
+
+    <section class="content">
+      <div class="hero">
+        <div><span class="eyebrow">SPATIAL PROVIDER INTELLIGENCE</span><h1>Find eligible care around every enrollee</h1><p>Search by enrollee, radius and location. Eligibility is checked against the active HMO plan.</p></div>
+        <button class="export" id="exportBtn">⇩ Export results</button>
+      </div>
+
+      <div class="metrics">
+        <div><small>ENROLLEES INDEXED</small><strong id="enrolleeCount">—</strong><span>Geocoded points</span></div>
+        <div><small>NETWORK PROVIDERS</small><strong id="providerCount">—</strong><span>Provider categories</span></div>
+        <div><small>PLAN MATCHING</small><strong>LIVE</strong><span>Plan verified per result</span></div>
+        <div><small>SEARCH ENGINE</small><strong>&lt;1s</strong><span>Browser spatial filter</span></div>
+      </div>
+
+      <div class="workspace">
+        <section class="control-panel">
+          <div class="panel-head"><div><h2>Provider search</h2><p>Configure your search</p></div><span>⌕</span></div>
+
+          <label>1. SELECT ENROLLEE</label>
+          <div class="search-wrap"><input id="enrolleeSearch" placeholder="Search name or enrollee ID..."><span>⌕</span></div>
+          <div id="suggestions" class="suggestions"></div>
+          <div id="selectedEnrollee" class="selected"></div>
+
+          <label>2. SEARCH LOCATION</label>
+          <div class="location-options">
+            <button class="location active" data-mode="home">⌂ Home</button>
+            <button class="location" data-mode="alternate">⌖ Another location</button>
+          </div>
+          <div id="alternateBox" class="alternate-box">
+            <input id="alternateAddress" placeholder="Enter an address or landmark...">
+            <button id="geocodeBtn">Find location</button>
+            <small>For this GitHub demo, browser location or typed coordinates can be used. A production geocoder can be added as a protected service.</small>
+          </div>
+
+          <label>3. SEARCH RADIUS</label>
+          <div class="radius-options">
+            <button data-radius="100">100 m</button><button class="active" data-radius="200">200 m</button><button data-radius="500">500 m</button><button data-radius="1000">1 km</button>
+          </div>
+
+          <label>4. PROVIDER CATEGORIES</label>
+          <div id="categories" class="categories"></div>
+
+          <div class="actions"><button id="clearBtn" class="secondary">Clear</button><button id="searchBtn" class="primary">⌕ Find eligible providers</button></div>
+        </section>
+
+        <section class="results-panel">
+          <div class="results-header"><div><h2>Provider proximity map</h2><p id="mapMeta">Loading provider network...</p></div><span class="live">● LIVE INDEX</span></div>
+          <div class="map" id="map">
+            <div class="map-label ikeja">LAGOS</div><div class="map-label vi">PROVIDER NETWORK</div>
+            <div class="water"></div>
+            <div class="road r1"></div><div class="road r2"></div><div class="road r3"></div><div class="road r4"></div>
+            <div id="radiusRing" class="ring"></div>
+            <div id="homeMarker" class="home-marker">⌂</div>
+            <div id="providerMarkers"></div>
+            <div class="legend"><span><i class="blue"></i> Enrollee</span><span><i class="green"></i> Eligible</span><span><i class="grey"></i> Out of plan</span></div>
+          </div>
+          <div class="results-title"><h2>Eligible providers nearby</h2><span id="resultCount">—</span></div>
+          <div id="resultCards" class="cards"></div>
+          <div id="emptyState" class="empty">No eligible providers match the current search. Try a wider radius or another provider category.</div>
+        </section>
+      </div>
+
+      <section class="audit">
+        <div class="audit-head"><div><h2>Eligibility audit trail</h2><p>Each provider is distance-filtered and plan-checked before display.</p></div><button id="csvBtn">Export CSV ↗</button></div>
+        <div class="table-wrap"><table><thead><tr><th>Provider</th><th>Category</th><th>Distance</th><th>Plan match</th><th>Network status</th></tr></thead><tbody id="auditBody"></tbody></table></div>
+      </section>
+    </section>
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="./app.js"></script>
+</body>
+</html>
